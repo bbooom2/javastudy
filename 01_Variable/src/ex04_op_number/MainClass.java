@@ -110,7 +110,7 @@ public class MainClass {
  	 			
  	 			//5% 이자 받으면 얼마? - 소수점 살려서 계산 
  	 			double result;  //그러므로 이게 필요했던 것 
- 	 		    result = account * 1.05;// result = account+account * 0.05; <- 이렇게 하면 long = long + double ->캐스팅 필요 
+ 	 		    result = account * 1.05;// result = account+account * 0.05; <- 이렇게 하면 double = long + double ->캐스팅 필요 
  	 		    System.out.println(result);
  	 	
  	 		}
@@ -120,7 +120,7 @@ public class MainClass {
  	 			
  		
 	    public static void main(String[] args) {
-		ex08(); // ex08 메소드 호출
+		ex07(); // ex07 메소드 호출
 		
 		
 	}
