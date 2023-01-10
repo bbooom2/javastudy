@@ -47,7 +47,7 @@ public class Ex01_array {
 	}
 	
 	
-	public static void ex02() { //우리가 공부해야하는 방식 
+	public static void ex02() { 
 		
 		// 배열 선언 + 생성 
 		int[] arr = new int[5];
@@ -131,14 +131,15 @@ public class Ex01_array {
 			scores[2] = 95;
 			scores[3] = 83;
 			scores[4] = 76;
-				
+			
+			// 값의 범위를 모를 때는 그 배열의 첫 번째 값을 기본값으로 설정하면 됨.
 			// 배열의 첫 번째 요소를 초기화로 저장하고, 
 			// 배열의 두 번째 요소부터 순회한다. 
 				
 			// 합계(평균), 최대/최소
-			int total = scores[0]; 
-			int max = scores[0]; 
-			int min = scores[0];
+			int total = scores[0]; //100 
+			int max = scores[0]; //100
+			int min = scores[0]; //100
 				
 			for(int i = 1; i < scores.length; i++) {
 					total += scores[i];
@@ -183,8 +184,12 @@ public class Ex01_array {
 		
 		int month = 5;
 		
-		System.out.println(month + "월은 " + season[month % 12 / 3] + "이다."); 
+		System.out.println(month + "월은 " + season[month % 12 / 3] + "이다.");  
+		//12월을 0으로 만드려고 12로 나눈거고 3개월마다 계절이 바뀌어서 3으로 나눈 것
 	}
+	
+	
+		// 08, 09문제는 지금 수준에서는 넘어가도 되는 문제긴 함 
 	
 	public static void main(String[] args) {
 			ex09();

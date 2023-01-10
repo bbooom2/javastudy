@@ -22,7 +22,7 @@ public class Ex03_advanced_for {
 	int total = 0;
 	int max = 0;
 	int min = 100;
-	for(int n : scores) {
+	for(int n : scores) { 
 			total += n;
 			if(max < n) {
 					max = n;

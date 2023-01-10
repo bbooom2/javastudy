@@ -4,7 +4,7 @@ public class Ex02_reference {
 
 	public static void ex01() {
 		
-		int[] arr;
+		int[] arr; //배열의 이름 , reference = address 
 		
 		arr = new int[5];
 		
@@ -17,13 +17,20 @@ public class Ex02_reference {
 		int[] a = new int[5];
 		int[] b;
 		
-		b = a; //b가 길이가 5인 배열이 된 것 
+		b = a; //b가 길이가 5인 배열이 된 것, a의 값을 b로 보내는 것 
 		
 		System.out.println(b[0]);
 		
 		for(int i = 0; i < b.length; i++) {
 				System.out.println(b[i]);
 			}
+		
+		// 배열 a와 배열 b가 같은지 확인해보자 
+		
+		b[0] = 100;
+		System.out.println(a[0]);
+		
+		
 			/* 
 		   |-------|
          a | 0x123 |──────────┐
@@ -34,7 +41,7 @@ public class Ex02_reference {
            |-------|          │
       a[1] |   0   |          │
            |-------|          │
-      a[2] |   0   |          │ b = a;
+      a[2] |   0   |          │ b = a; //공간이 같아서 a와 b는 완벽하게 같다 
            |-------|          │
       a[3] |   0   |          │
            |-------|          │
