@@ -192,7 +192,7 @@ public class Ex01_array {
 		// 08, 09문제는 지금 수준에서는 넘어가도 되는 문제긴 함 
 	
 	public static void main(String[] args) {
-			ex09();
+			ex04();
 	}
 
 

@@ -3,6 +3,8 @@ package ex01_field;
 public class MainClass {
 
 	public static void main(String[] args) {
+		
+		//메소드 안에 있으면 변수, 클래스 안에 있으면 필드.
 		// class 만들면 개별 객체 여러개 만들 수 있다. 
 		// User 타입의 객체(클래스 타입은 변수가 아닌 객체라고 부름) 선언 - User라는 클래스 만들었기에 User로 시작 
 		User user1;
