@@ -165,6 +165,8 @@ public class MainClass {
 		//  69~0  : F
 		// 예시)
 		// 점수 98점은 학점 A+입니다.
+		
+		
 		public static void ex08() {
 			int score = 98;
 			char grade, point;

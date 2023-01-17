@@ -1,6 +1,6 @@
 package ex01_String;
 
-public class MainClass {
+public class Ex01_String {
 	
 	public static void literal() {
 		//문자열 리터럴(Literal)
@@ -211,7 +211,7 @@ public class MainClass {
 	
 	public static void trim() {
 		//trim
-		//문자열의 앞ㅍ뒤에 포함된 공백 문자(스페이스, 탭, 엔터 등)를 제거
+		//문자열의 앞뒤에 포함된 공백 문자(스페이스, 탭, 엔터 등)를 제거
 		
 		String str = "   hahaha   hohoho   ";
 		System.out.println("(" + str + ")");
