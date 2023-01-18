@@ -38,7 +38,7 @@ public class Ex02_Random {
 		int randNumber2 = random.nextInt(); // int 범위 내의 난수 발생 
 		System.out.println(randNumber2);
 		
-		int randNumber3 = random.nextInt(10);
+		int randNumber3 = random.nextInt();
 		System.out.println(randNumber3);
 	}
 	public static void main(String[] args) {
