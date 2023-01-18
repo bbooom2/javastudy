@@ -9,7 +9,7 @@ public class Ex02_Random {
 	 	1. 어떤 패키지에 속한 클래스인지 명시하는 코드이다. 
 	 	2. java.util.Random 클래스의 경우 import.java.util.Random; 방식으로 사용된다.
 	 	3. import.java.util.*; 방식으로 java.util 패키지의 모든 클래스를 import 할 수 있다. 
-	 	4. import를 생랼할 수 있는 경우 
+	 	4. import를 생략할 수 있는 경우 
 	 	 1) java.lang 패키지의 클래스 
 	 	 2) 동일한 패키지의 클래스  
 	 	5. import 방식 : 클래스를 입력할 때 "항상" 자동 완성을 이용한다. 

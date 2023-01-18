@@ -1,6 +1,7 @@
 package practice01;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class MainClass {
 
@@ -63,12 +64,15 @@ public class MainClass {
 	
 		
 		public static void ex07() {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("i" + "x" + "j"+"?"+">>>" );
+			Random random = new Random();
+			int randNumber = random.nextInt(81);
 			for(int i = 2; i < 10; i++) {
 				for(int j = 1; j < 10; j++) {
-					Random random = new Random();
-					int randNumber = random.nextInt(81);
-					System.out.println(i +" x "+ j +" = "+( i * j ));
-				}
+					if() {
+					}System.out.println("정답");	
+				}else System.out.println("땡"); 
 					
 			}
 		}
