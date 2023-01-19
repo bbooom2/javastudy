@@ -63,19 +63,34 @@ public class MainClass {
 		// 땡
 	
 		
+		for(int i = 2; i < 10; i++) {
+			for(int j = 1; j < 10; j++) {
+				System.out.println();
+				if() {
+				}System.out.println("정답");	
+			}else System.out.println("땡");
 		public static void ex07() {
+			
 			Scanner sc = new Scanner(System.in);
-			System.out.println("i" + "x" + "j"+"?"+">>>" );
-			Random random = new Random();
-			int randNumber = random.nextInt(81);
-			for(int i = 2; i < 10; i++) {
-				for(int j = 1; j < 10; j++) {
-					if() {
-					}System.out.println("정답");	
-				}else System.out.println("땡"); 
+			String expr = sc.next();
+			String[] item = expr.split("[*]");
+			
+			int number1 = Integer.parseInt(item[0]);
+			int number2 = Integer.parseInt(item[1]);
+			System.out.println(number1 * number2 "="+ randNumber);
+			sc.close();
+			
+			System.out.print("구구단을 외자 >>> " );
+			int dan = sc.nextInt();
+			System.out.println("정답");
+			
+			 
 					
+	
+	
+			
 			}
-		}
+		
 		
 		// 문제8. 임의의 주민등록번호(personalId)를 분석하여 나이와 성별을 출력하시오.
 		// 나이 : 현재년도 - 태어난년도 + 1

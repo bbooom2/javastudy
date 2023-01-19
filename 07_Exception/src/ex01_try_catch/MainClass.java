@@ -1,5 +1,6 @@
 package ex01_try_catch;
 
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class MainClass {
@@ -7,13 +8,13 @@ public class MainClass {
 	public static void ex01() {
 			String[] season = new String[4];
 			
-			try {
+			try { //try에 있는 걸 실행하려고 한다! 
 				
 			season[0] = "spring";
 			season[1] = "summer";
 			season[2] = "autumn";
 			season[3] = "winter";
-			season[4] = "what??";
+			season[4] = "what??"; //일부러 에러를 냄, 점프해서 곧바로 catch로 넘어 감.
 			
 			
 			for(String str : season) {
@@ -22,7 +23,7 @@ public class MainClass {
 			
 				//예외객체 이름은 관습적으로 e라고 기재함 
 			
-			} catch(Exception e) { //모든 예외는 Exception으로 처리 가능
+			} catch(Exception e) { //모든 예외는 Exception으로 처리 가능, 실행흐름을 넘기겠다. (발생하면)
 				System.out.println("ArrayIndexOutofBoundsException 발생");
 		}
 	}
@@ -65,6 +66,15 @@ public class MainClass {
 		
 	}
 	
+	public static void ex04() {
+		try {
+			FileReader fr = new FileReader("sample.txt"); 
+			fr.close(); //경고 메시지 없어짐 
+		}catch(Exception e) {
+			System.out.println("예외가 발생하였다.");
+		}
+		
+	}
 	
 	public static void main(String[] args) {
 		
