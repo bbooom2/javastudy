@@ -5,10 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ToString
+@ToString //systemout에서 출력 가능 
 @Setter
 @Getter
-@AllArgsConstructor  //constructor using 필드를 이용한 생성자 
+@AllArgsConstructor  
 public class Car {
 
 	private String carNo;

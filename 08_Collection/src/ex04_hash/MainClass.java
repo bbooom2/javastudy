@@ -1,4 +1,4 @@
-package ex04_finish;
+package ex04_hash;
 
 import java.util.HashSet;
 import java.util.Set;

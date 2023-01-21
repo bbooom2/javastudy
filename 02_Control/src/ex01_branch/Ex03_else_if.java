@@ -6,7 +6,7 @@ public class Ex03_else_if {
 		
 		// 80 이상 : 상
 		// 60 이상 : 중 
-		// 나머지 : 하 
+		// 나머지  : 하 
 		
 		int score = 80;
 		

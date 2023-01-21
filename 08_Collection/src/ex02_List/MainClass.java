@@ -7,6 +7,8 @@ import java.util.List;
 public class MainClass {
 
 	public static void ex01() {
+		
+		//list < Map < String,Object>>
 		// 배열 리스트(Array List) 선언 및 생성 
 		List<String> list = new ArrayList<String>();
 		
