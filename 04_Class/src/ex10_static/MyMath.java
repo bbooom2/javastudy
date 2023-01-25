@@ -21,13 +21,14 @@ public class MyMath {
 	
 	// 메소드 
 	
-	//원의 지름 구하기  - radius = 반지름 
+	//원의 지름 구하기  (반지름 : radius)
 	public static double getCircleArea(double radius) {
 		return PI * radius * radius;
 		
 	}
 	
 	
+	// 메소드 만들기 (최대값)
 	
 	public static double max(double...numbers) {
 		double max = Double.MIN_VALUE;
@@ -39,7 +40,7 @@ public class MyMath {
 		return max;
 	}
 
-	// 메소드 (최소값 만들기) 
+	// 메소드 만들기 (최소값)
 
 	public static double min(double...numbers) {
 		double min = Double.MAX_VALUE;

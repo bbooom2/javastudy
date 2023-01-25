@@ -11,8 +11,8 @@ public class Ex01_array {
 		arr = new int[3][2]; //3행 2열(길이가 2인 배열이 3개가 있다.)
 		
 		// 2차원 배열 순회 (이중 for문 사용 - 바깥쪽 i , 안쪽 j)
-		for(int i = 0; i < 3; i++) { // i = 행 번호 , 1차원 배열과 마찬가지로 2라고 기입하지 않기 
-			for(int j = 0; j < 2; j++) { // j = 열 번호 , 1차원 배열과 마찬가지로 3이라고 기입하지 않기 
+		for(int i = 0; i < 3; i++) { // i = 행 번호
+			for(int j = 0; j < 2; j++) { // j = 열 번호
 				System.out.print(arr[i][j] + "\t"); // 숫자 가로로 
 			}
 			System.out.println(); // 줄바꿈 
@@ -58,7 +58,7 @@ public class Ex01_array {
 		arr[2] = new int[2]; //3번째 1차원 배열 
 		
 		
-		// 2차원 배열 순회 (정방배열이건 비정방배열이건 이중포문으로 하면 됨) 
+		// 2차원 배열 순회 (정방배열이건 비정방배열이건 이중for문으로 하면 됨) 
 		for(int i = 0; i < arr.length; i++) {
 			for(int j = 0; j < arr[i].length; j++) {
 					System.out.print(arr[i][j] + "\t");

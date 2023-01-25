@@ -19,7 +19,7 @@ public class Customer {
 	public void buy(Bakery bakery, int money) {
 		
 		// bakery에 money를 전달하고 빵과 잔돈을 받는다.
-		BreadAndChange bnc = bakery.sell(money);
+		BreadAndChange bnc = bakery.sell(money); // buy money에서 sell money로 넘어감  
 		
 		// customer 처리(빵은 늘었고, 돈은 줄었다.)
 		this.money -= money;  // 돈을 냈다.

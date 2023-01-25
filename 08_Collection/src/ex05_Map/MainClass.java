@@ -25,7 +25,7 @@ public class MainClass {
 		 */
 		
 		// Person 정보를 HashMap으로 만들기 
-		Map<String, Object> person = new HashMap<>(); //person이라는 맵에 저장한것 
+		Map<String, Object> person = new HashMap<String, Object>(); //person이라는 맵에 저장한것 
 													 // 객체를 안 만들고 해쉬맵을 써도 됨 
 		//키가 중복되지 않음 키값을 관리할때 키값 중복 관리를 해야함 그걸 해쉬기능을 하는 거임 해시셋처럼 
 		

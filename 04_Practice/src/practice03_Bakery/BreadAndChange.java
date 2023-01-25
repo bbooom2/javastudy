@@ -1,8 +1,8 @@
 package practice03_Bakery;
 
-// 빵과 잔돈
+// 빵과 잔돈 
 
-public class BreadAndChange {
+public class BreadAndChange { //중간역할 
 
 	// 필드
 	private int breadCount;  // 빵의 개수

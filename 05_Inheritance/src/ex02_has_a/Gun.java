@@ -18,16 +18,16 @@ public class Gun {
 	
 	// 메소드 
 	
-	public String getModel() {
+	public String getModel() { //모델 받아옴 
 		return model;
 	}
-	public void setModel(String model) {
+	public void setModel(String model) {	// 모델 반출 
 		this.model = model;
 	}
-	public int getBullet() {
+	public int getBullet() { //총알 받아옴 
 		return bullet;
 	}
-	public void setBullet(int bullet) {
+	public void setBullet(int bullet) { // 총알 반출 
 		this.bullet = bullet;
 	}
 	

@@ -25,7 +25,7 @@ public class Ex01_String {
 		 */
 		
 		// 참조값이 같다는 의미이다. 저장된 문자열이 같다는 의미가 아니다. 
-		System.out.println(str1 == str2); //참조값이 같다. 
+		System.out.println(str1 == str2); //참조값이 같다. true 
 	}
 	
 	public static void StringObject() {
@@ -36,20 +36,23 @@ public class Ex01_String {
 		//문자열 객체는 언제나 새로 생성된다. 
 		
 		/*
-		    |-------|
-       str1 | 0x123 |
-            |-------|
-       str2 | 0x123 |
-            |-------|
-            |  ...  |
-            |-------|
-            |"hello"| 0x123
-            |-------|
-
-		 */
+        |-------|
+   str1 | 0x123 |
+        |-------|
+   str2 | 0x456 |
+        |-------|
+        |  ...  |
+        |-------|
+        |"hello"| 0x123
+        |-------|
+        |  ...  |
+        |-------|
+        |"hello"| 0x456
+        |-------|
+    */
 		
-		// 참조값이 같다는 의미이다. 저장된 문자열이 같다는 의미가 아니다. 
-		System.out.println(str1 == str2);	
+		// 참조값이 다르다는 의미이다. 저장된 문자열이 다르다는 의미가 아니다. 
+		System.out.println(str1 == str2); //false
 	}
 
 	public static void equals() {
@@ -110,7 +113,8 @@ public class Ex01_String {
 		
 		
 		//1.substring(int begin) : 인덱스 begin부터 끝까지 반환 
-		//2.substring(int begin, int end) : 인덱스 begin부터 end 이전까지 반환(begin <= 추출범위 < end)
+		//2.substring(int begin, int end) : 인덱스 begin부터 end 이전까지 반환
+		//  (begin <= 추출범위 < end)
 		
 		String name = "민경태";
 		String familyName = name.substring(0,1);
@@ -132,15 +136,15 @@ public class Ex01_String {
 		// 2. indexOf(String str, int index) : 인덱스 index부터 str을 검색 
 		
 		String slogan = "걱정한다고 걱정이 없어지면 걱정이 없겠네";
-		int idx1 = slogan.indexOf("걱정");
-		int idx2 = slogan.indexOf("걱정", idx1 + 1);
-		int idx3 = slogan.indexOf("걱정", +idx2 + 1);
+		int idx1 = slogan.indexOf("걱정");  
+		int idx2 = slogan.indexOf("걱정", idx1 + 1); 
+		int idx3 = slogan.indexOf("걱정", +idx2 + 1); 
 		
 		int idx4 = slogan.indexOf("민경태"); //-1이 나오면 안 들어있다는 뜻
 		
-		System.out.println(idx1);
-		System.out.println(idx2);
-		System.out.println(idx3);
+		System.out.println(idx1); //0
+		System.out.println(idx2); //6 
+		System.out.println(idx3); //15
 		System.out.println(idx4);
 		
 	}
@@ -148,13 +152,13 @@ public class Ex01_String {
 	public static void startsWith() {
 		
 		//startWith
-		//문자열이 지정된 정규식 패턴(Regular Expression)으로 시작하면 true 반환 
+		//문자열이 지정된 정규식 패턴(Regular Expression)으로 '시작'하면 true 반환 
 		
 		// endsWith
-		//문자열이 지정된 정규식 패턴(Regular Expression)으로 끝나면 true 반환
+		//문자열이 지정된 정규식 패턴(Regular Expression)으로 '끝'나면 true 반환
 		
 		// matches
-		// 문자열이 지정된 정규식 패턴(Regular Expression)을 포함하면 true 반환
+		// 문자열이 지정된 정규식 패턴(Regular Expression)을 '포함'하면 true 반환
 		
 		String name = "민경태";
 		if(name.startsWith("민")) {
@@ -173,8 +177,8 @@ public class Ex01_String {
 		
 		String slogan = "걱정한다고 걱정이 없어지면 걱정이 없겠네";
 		
-		int idx1 = slogan.lastIndexOf("걱정");
-		int idx2 = slogan.lastIndexOf("민경태");
+		int idx1 = slogan.lastIndexOf("걱정"); //15
+		int idx2 = slogan.lastIndexOf("민경태"); //-1
 		
 		System.out.println(idx1);
 		System.out.println(idx2);
@@ -228,7 +232,7 @@ public class Ex01_String {
 		
 		String str = "best of the best";
 		String result = str.replace("best", "worst");
-		System.out.println(result);
+		System.out.println(result); //worst of the worst
 		
 		//replaceAll
 		//정규식 패턴(Regular Expression)을 만족하는 부분을 변환한 결과를 반환
@@ -256,7 +260,7 @@ public class Ex01_String {
 		
 	
 		//isBlank
-		//빈 문자열이거나 공북 문자로만 구성되었다면 true 반환 
+		//빈 문자열이거나 공백 문자로만 구성되었다면 true 반환 
 		//JDK 11 이후에서만 사용 가능 
 		if(str.isBlank()) {
 			System.out.println("빈 문자열이다.");
@@ -291,7 +295,7 @@ public class Ex01_String {
 	public static void ex01() {
 		String url = "https://comic.naver.com/webtoon/detail?titleId=758037&no=112&weekday=mon";
 		
-		String requestURI = url.substring(0, url.indexOf("?")); //https://comic.naver.com/webtoon/detail 뭘 하면 나오게 detail까지 나오게 될까? 물음표는 2개이상 못들어오게 되어있음. 
+		String requestURI = url.substring(0, url.indexOf("?")); //https://comic.naver.com/webtoon/detail 뭘 하면 detail까지 나오게 될까? 물음표는 2개이상 못들어오게 되어있음. 
 		
 		
 		System.out.println(requestURI);
@@ -314,17 +318,20 @@ public class Ex01_String {
 		*/
 		
 		//선생님 답안 
-		/*String fileName = fullName.substring(0,fullName.lastIndexOf(".")); //apple
+	/* 
+	    String fileName = fullName.substring(0,fullName.lastIndexOf(".")); //apple
 		String extName = fullName.substring(fullName.lastIndexOf("." + 1)); //jpg
 		
 		System.out.println(fileName);
 		System.out.println(extName);
-		*/
+	*/
 		
 		String fullName = "a.p.p.l.e.tar.gz";
 		
 		String fileName = "";
 		String extName = "";
+		
+		
 		if(fullName.endsWith(".tar.gz")) {
 			fileName = fullName.substring(0, fullName.lastIndexOf(".tar.gz"));
 			extName = ".tar.gz";
@@ -336,7 +343,7 @@ public class Ex01_String {
 	}
 
 	public static void main(String[] args) {
-		format();
+		ex02();
 		
 	}
 

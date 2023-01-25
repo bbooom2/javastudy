@@ -1,6 +1,5 @@
 package practice01;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class MainClass {
@@ -62,32 +61,44 @@ public class MainClass {
 		// 8x7? >>> 49
 		// 땡
 	
-		
-		for(int i = 2; i < 10; i++) {
-			for(int j = 1; j < 10; j++) {
-				System.out.println();
-				if() {
-				}System.out.println("정답");	
-			}else System.out.println("땡");
 		public static void ex07() {
 			
-			Scanner sc = new Scanner(System.in);
-			String expr = sc.next();
-			String[] item = expr.split("[*]");
+			/*
+		 	난수 생성하기 
+		 	-랜덤함수는 기본이 double이기 때문에 int로 변경 
+		 	
+		 	Math.random()					0.0 <= n < 1.0
+		 	Math.random() * 8 				0.0 <= n < 8.0
+		 	(int)(Math.random() * 8) 		  0 <= n < 8 
+		 	(int)(Math.random() * 8) + 2   	  2 <= n < 10
+		 	
+		 	난수 생성하기 
+		 	Math.random()					0.0 <= n < 1.0
+		 	Math.random() * 9 				0.0 <= n < 9.0
+		 	(int)(Math.random() * 9) 		  0 <= n < 9 
+		 	(int)(Math.random() * 9) + 1   	  1 <= n < 10
+		 	
+		 	
+		 	---------------------------------------------
+		 	(int)(Math.random() * 개수) + 시작값 
+		 	(int)(Math.random() * 개수 + 시작값) 
+		 	
+		 */ 
 			
-			int number1 = Integer.parseInt(item[0]);
-			int number2 = Integer.parseInt(item[1]);
-			System.out.println(number1 * number2 "="+ randNumber);
-			sc.close();
+			int dan = (int)(Math.random() * 8) + 2;
+			int n = (int)(Math.random() * 9) + 1;
 			
-			System.out.print("구구단을 외자 >>> " );
-			int dan = sc.nextInt();
-			System.out.println("정답");
+			//Scanner 객체 생성 
+			//이때 Scanner import 해줘야 스캐너 사용 가능
+			//스캐너 선언 
+			Scanner sc = new Scanner(System.in); 
 			
-			 
-					
-	
-	
+			//int 입력 
+			System.out.print(dan + "x" + n + "? >>> "); //생성한 임의의 구구단 산출 
+			int answer = sc.nextInt();
+			
+			//입력값을 삼항연산자로 비교 
+			System.out.println(dan * n == answer ?  "정답" : "땡");
 			
 			}
 		

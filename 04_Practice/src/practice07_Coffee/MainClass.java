@@ -4,6 +4,9 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
+		
+		
+		
 		// 브라질 원두
 		CoffeeBean coffeeBean = new CoffeeBean("브라질");
 		

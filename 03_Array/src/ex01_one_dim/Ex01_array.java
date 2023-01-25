@@ -93,7 +93,7 @@ public class Ex01_array {
 		
 		// 각 점수를 배열에 저장하기 
 		scores[0] = 100;
-		scores[1] = 70;
+		scores[1] = 70;  
 		scores[2] = 95;
 		scores[3] = 83;
 		scores[4] = 76;

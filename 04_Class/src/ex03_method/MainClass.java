@@ -19,9 +19,9 @@ public class MainClass {
 	CoffeeMachine coffeeMachine = new CoffeeMachine();
 	
 	
-	CoffeeAndChange cofeeAndChange = coffeeMachine.buyCoffee(500,1);
-	System.out.println(cofeeAndChange.coffee); // null
-	System.out.println(cofeeAndChange.change); //500원
+	CoffeeAndChange coffeeAndChange = coffeeMachine.buyCoffee(500,1);
+	System.out.println(coffeeAndChange.coffee); // null
+	System.out.println(coffeeAndChange.change); //500원
 	
 	System.out.println(coffeeMachine.moneyPot); // 0
 	
