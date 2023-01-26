@@ -1,5 +1,9 @@
 package practice04_Bakery;
 
+
+// 베이커리에서는 빵집 직원되보기 
+// 커스터머에서는 손님입장 되보기 
+
 public class Customer {
 	// 필드
 		private int breadCount;  // 구매한 빵의 개수

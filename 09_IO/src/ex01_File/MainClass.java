@@ -18,7 +18,7 @@ public class MainClass {
 	 		2) 리눅스 : 슬래시(/)
 	 */
 
-	public static void ex01() {
+	public static void ex01() { //디렉터리 만들기 
 		
 		// File.separator : 플랫폼에 따라서 자동으로 경로 구분자를 사용한다. 
 		
@@ -39,7 +39,7 @@ public class MainClass {
 		
 	}
 	
-	public static void ex02() throws IOException { // 예외 처리를 ex02 메소드를 호출한 곳으로 넘긴다. 
+	public static void ex02() throws IOException { // 예외 처리를 ex02 메소드를 호출한 곳으로 넘긴다. //파일 만들기 
 		
 		File dir = new File("C:" + File.separator + "storage");
 		if(dir.exists() == false) {
@@ -56,7 +56,7 @@ public class MainClass {
 		
 	}
 	
-	public static void ex03() throws IOException {
+	public static void ex03() throws IOException { //각종 정보 제공 
 		
 		File dir = new File("C:" + File.separator + "storage");
 		

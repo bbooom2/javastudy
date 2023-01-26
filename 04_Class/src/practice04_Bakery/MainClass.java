@@ -1,5 +1,11 @@
 package practice04_Bakery;
 
+
+// 객체지향 프로그램 만들 때 순서 
+// 빵집 직원과 구매자간의 거래 프로그램 
+// 빵집부터 만드는 게 좋음 - 커스터머에서 빵집 참조하니까 
+// 빵집 뭐가 필요할까  = 빵 등 필드 생성  - 생성자 - 클래스 만들기 
+
 public class MainClass {
 
 	public static void main(String[] args) {

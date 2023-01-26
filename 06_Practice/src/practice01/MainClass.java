@@ -17,14 +17,17 @@ public class MainClass {
 		// 문제2. 친구 3명을 저장할 수 있는 배열을 생성하고 임의의 값으로 초기화하시오.
 		// 새로 사귄 친구의 수를 입력 받아서 기존 친구들이 저장된 배열의 길이를 새로 사귄 친구의 수만큼 늘리시오.
 		public static void ex02() {
-			
+			String[] str = new String[3];
+			str = {"진구", "땡구", "땡순"};
 		}
 		
 		// 문제3. Scanner 클래스의 next() 메소드를 이용해서 사용자로부터 문자열을 계속 입력 받는다.
 		// 사용자가 "종료" 문자열을 입력하면 더 이상 입력 받지 않는다.
 		// 총 몇 번만에 종료되었는지 그 횟수를 마지막에 출력한다.
 		public static void ex03() {
-			
+			Scanner sc = new Scanner(System.in);
+			String name = next();
+			System.out.println("종료");
 		}
 
 		// 문제4. 퀴즈 정답을 맞힐때까지 계속 퀴즈를 내시오.
@@ -41,6 +44,12 @@ public class MainClass {
 		// 문제5. 평점 입력 받아서 해당 평점만큼 ★을 출력하시오.
 		// 평점은 1 ~ 5 사이 정수로 입력 받는데, 벗어난 범위는 다시 입력 받는다.
 		public static void ex05() {
+			Scanner sc = new Scanner(System.in);
+			
+			int n = (int)(Math.random() * 5) + 1;
+			System.out.println("평점 : " + n);
+			nextint();
+			
 			
 		}
 		
