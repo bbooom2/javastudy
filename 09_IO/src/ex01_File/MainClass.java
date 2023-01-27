@@ -27,7 +27,7 @@ public class MainClass {
 		File dir = new File("C:"+ File.separator + "storage"); //C드라이브 아래 storage 폴더를 의미한다. 
 		
 		// 없으면 만들고, 있으면 지운다. 
-		if(dir.exists() == false) { 
+		if(dir.exists() == false) { //디렉터리가 존재하지 않는다면 
 			dir.mkdirs(); // 디렉터리 만들기 명령 
 			System.out.println("C:" + File.separator + "storage 생성 완료");
 		} else {
@@ -101,8 +101,8 @@ public class MainClass {
 			}
 		}
 	}
-	public static void main(String[] args) {
-		ex04();
+	public static void main(String[] args) throws IOException{
+		ex03(); //예외처리가 필요한 메소드는 메인메소드에도 똑같이 throws IOException처리를 해줘야 한다. 
 
 	}
 

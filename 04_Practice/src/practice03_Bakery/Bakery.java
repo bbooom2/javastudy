@@ -5,7 +5,7 @@ package practice03_Bakery;
 public class Bakery {
 
 	// 필드
-	private int breadCount;  // 판매하는 빵의 개수
+	private int breadCount;  // 빵 재고 
 	private int breadPrice;  // 판매하는 빵의 가격
 	private int bakeryMoney; // 빵집에 있는 돈
 
@@ -27,6 +27,8 @@ public class Bakery {
 		int change = money % breadPrice;
 		
 		// 고객에게 돌려 줄 BreadAndChange 객체 생성
+		//BreadAndChange에서 breadcount와 Bakery의 sellbread가 같은 의미라 그런가?
+		//그렇다면 생성자와 객체메소드 매개변수 부분은 달라도 되는건가? 
 		BreadAndChange bnc = new BreadAndChange(sellBread, change);
 		
 		// Bakery 판매처리(빵은 줄었고, 돈은 늘었다.)

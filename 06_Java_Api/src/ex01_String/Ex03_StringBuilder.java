@@ -9,7 +9,7 @@ public class Ex03_StringBuilder {
 	 	1.String을 연결하는 클래스이다. 
 	 	2.싱글스레드 환경에서만 사용이 가능하다. 
 	 	3.동작이 빠르다.
-	 */
+		 */
 		
 		// StringBuilder
 		StringBuilder sb = new StringBuilder();

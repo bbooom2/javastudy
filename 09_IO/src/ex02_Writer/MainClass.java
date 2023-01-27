@@ -14,17 +14,16 @@ public class MainClass {
 	  	2. 일방통행이다. 
 	  		1) 입력 스트림 : 입력만 받을 수 있다. 
 	  		2) 출력 스트림 : 출력만 할 수 있다. 
-	  	
 	 */
 	
 	/*
 	  	Writer 
 	  	1. 문자 기반의 출력 스트림이다. 
 	  	2. Writer로 끝나는 이름의 클래스는 모두 문자 기반의 출력 스트림이다. 출력이라는 건 보낸다는 개념.
-	  	3. 문자를 내 보내는 스트림이다. (파일 문자를 보낸다. 서버로 문자를 보낸다 등등) 
+	  	3. 문자를 내보내는 스트림이다. (파일 문자를 보낸다. 서버로 문자를 보낸다 등등) 
 	 */
 
-	public static void ex01() { //다보내기 
+	public static void ex01() { //다 보내기 
 		
 		//디렉터리 작업 
 		File dir = new File("C:" + File.separator + "storage");
@@ -39,22 +38,24 @@ public class MainClass {
 		FileWriter fw = null;
 		try {
 				
-			//출력스트림 생성 
+				//출력스트림 생성 
 				fw = new FileWriter(file); //반드시 예외 처리가 필요한 코드 
 		 
 		
-		//출력 스트림으로 문자 보내기_글자 하나 보낼 때는 int 사용 (int와 char는 정수타입. 인트 4바이트 캐릭터 2바이트 그래서 인트에도 문자 저장 가능) 
-		// 반드시 예외 처리가 필요 
+				//출력 스트림으로 문자 보내기_글자 하나 보낼 때는 int 사용 
+				//(int와 char는 정수타입. 인트 4바이트 캐릭터 2바이트 그래서 인트에도 문자 저장 가능) 
+				// 반드시 예외 처리가 필요 
 				int c = 'I';
 				char[] cbuf = {' ', 'a', 'm'};
 				String str = " a boy."; 
 						
-				fw.write(c);
+				fw.write(c); //반드시 예외 처리가 필요한 코드 
 				fw.write(cbuf);
 				fw.write(str);
 				
 				System.out.println("ex01.txt 파일이 생성되었다.");
-				}catch(IOException e) {
+				
+				} catch(IOException e) {
 					e.printStackTrace(); //개발할 때 캐치 코드는 고민 말고 이것
 					}finally { //예외 발생하든 안하든 반드시 finally 실행
 						try {
@@ -64,10 +65,10 @@ public class MainClass {
 								//반드시 예외 처리가 필요한 코드. catch나 finally에 있으면 안 되고 try에 있어야 한다고 error 뜨는 것  
 								//close는 무조건 들어가야 하는 코드. 
 							}
-						}catch(IOException e ) {
-							e.printStackTrace();
-						}
+						}	catch(IOException e ) {
+								e.printStackTrace();
 					}
+			}
 		}	
 	
 	public static void ex02() { //골라서 보내기 
