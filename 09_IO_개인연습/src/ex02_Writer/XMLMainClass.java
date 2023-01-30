@@ -18,9 +18,11 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 
+
 public class XMLMainClass {
+
 	
-	/*
+		/*
 	 	XML
 	 	1. eXtencible Markup Language
 	 	2. HTML(표준 마크업 언어)의 확장 버전 
@@ -54,7 +56,8 @@ public class XMLMainClass {
 	 
 	 
 	 */
-
+	
+	
 	public static void main(String[] args) {
 		
 		Map<String, Object> product1 = new HashMap<String, Object>();
@@ -78,42 +81,40 @@ public class XMLMainClass {
 		List<Map<String, Object>> productList = Arrays.asList(product1, product2, product3);
 		
 		try {
-			// Document 생성(Document는 XML문서 자체를 의미한다.)
-			//DocumentBuilderFactory에서 만드는 건 DocumentBuilderFactory 
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance(); 
+			//Document 생성 (Document는 XML문서 자체를 의미한다.)
+			//DocumentBuilderFactory에서 만드는 건 DocumentBuilderFactory
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document document = builder.newDocument();
 			document.setXmlStandalone(true);  // standalone="no" 제거하기
-			
-			
 			
 			// <products> 태그 : Element 생성 
 			Element products = document.createElement("products");
 			document.appendChild(products);
 			
-			// 동일한 게 3개 나와야 하니까 반복문 돌리기 
+			// 동일한 게 3개 나와야 하니까 반복문 돌리기
 			// 순회 
-			for(Map<String, Object> map : productList){
-				// <product> 태그 : Element 생성 
+			
+			for (Map<String, Object> map : productList) {
+			// <product> 태그 : Element 생성 
 				Element product = document.createElement("product");
 				products.appendChild(product);
 				
-				// <model> 태그 :  Element 생성 
+			// <model> 태그 :  Element 생성 
 				Element model = document.createElement("model");
 				product.appendChild(model);
-				model.setTextContent((String)map.get("model")); // 오브젝트로 설정을 해줬기 때문에 캐스팅 해줘야 함 
+				model.setTextContent((String)map.get("model"));// 오브젝트로 설정을 해줬기 때문에 캐스팅 해줘야 함 
 				
-				
-				// <maker> 태그 : Element 생성 
+			// <maker> 태그 : Element 생성 
 				Element maker = document.createElement("maker");
 				product.appendChild(maker);
-				maker.setTextContent((String)map.get("maker"));// 오브젝트로 설정을 해줬기 때문에 캐스팅 해줘야 함
+				maker.setTextContent((String)map.get("maker"));// 오브젝트로 설정을 해줬기 때문에 캐스팅 해줘야 함 
 				
 				
-				//<price> 태그 : Element 생성 
+				//<price> 태그 : Element 생성 	
 				Element price = document.createElement("price");
 				product.appendChild(price);
-				price.setTextContent(map.get("price")+""); // 메소드 사용법이 String만 요구함, 빈문자열 더해주면 String 되는 걸 기억하기 다른것과 똑같이 앞에 String해줘도 됨. 
+				price.setTextContent(map.get("price")+"");// 메소드 사용법이 String만 요구함, 빈문자열 더해주면 String 되는 걸 기억하기 다른것과 똑같이 앞에 String해줘도 됨. 
 				
 			}
 			
@@ -124,24 +125,25 @@ public class XMLMainClass {
 			transformer.setOutputProperty("indent", "yes"); // 들여쓰기 
 			transformer.setOutputProperty("doctype-public", "yes");	// standalone="no" 제거하기 위해서 document.setXmlStandalone(true);를 추가하면 개행(줄바꿈)이 안 되므로 추가한 코드 
 			
+			
 			// XML 문서 만들기
-			File dir = new File("C:" + File.separator + "storage");
+			File dir = new File("C:" + File.separator + "storage" );
 			if(dir.exists() == false) {
 				dir.mkdirs();
 			}
+			
 			File file = new File(dir, "product.xml");
-			Source source = new DOMSource(document);
+			
+			Source sourse = new DOMSource(document);
 			StreamResult streamResult = new StreamResult(file);
-			transformer.transform(source, streamResult);
+			transformer.transform(sourse, streamResult);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+					
+		}
 		
 	}
-	
-}
-
-			
 
 

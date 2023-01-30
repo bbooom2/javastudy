@@ -1,11 +1,17 @@
 package practice;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -14,6 +20,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Scanner;
+
+
 
 public class MainClass {
 	
@@ -234,7 +242,7 @@ File dir = new File("C:" + File.separator + "storage");
 
 	//문제 6. C:\storage\diary.txt 파일을 C:\storage2\diary.txt 파일로 이동하시오 
 	public static void ex06() {
-File from = new File("C:" + File.separator + "storage", "diary.txt");		
+		File from = new File("C:" + File.separator + "storage", "diary.txt");		
 		
 		File toDir = new File("C:" + File.separator + "storage2");
 		if(toDir.exists() == false) {
@@ -273,9 +281,78 @@ File from = new File("C:" + File.separator + "storage", "diary.txt");
 			e.printStackTrace();
 		} 
 	}
+	
+	//문제7. System.in은 키보드로부터 바이트 데이터를 입력 받는 InputStream이다. 
+	//System.in으로부터 문장 1개를 입력 받아서 출력하시오. 
+	//Scanner 대신 BufferedReader를 사용하시오. 
+	//중간에 변환 과정 필요 (바이트스트림으로 문자 스트림으로 바꿀 것) 
+	
+	public static void ex07() {
+		
+		BufferedReader br = null; 
+		
+		try {
+			br = new BufferedReader(new InputStreamReader(System.in)); //키보드에서 들어오는 데이터가 문자로 바뀌어서 속도 향상 
+			System.out.print("문장 입력 >>> ");
+			String sentence = br.readLine();
+			
+			System.out.println("입력된 문장 : " + sentence);
+		}catch(IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if (br != null ) {
+					br.close();
+				}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	//문제8. C:\GDJ61\installer\eclipse-jee-2021-030-R-win32-x86_64.zip 파일을 
+	// C:\storage\eclipse.zip으로 복사하시오 
+	public static void ex08() {
+		String sep = File.separator;
+		File from = new File("C:" + sep + "GDJ61"+sep+"installer"+sep , "eclipse0123.zip");	
+		File to = new File("C:" + sep + "storage" + sep + "eclipse.zip");
+	
+		BufferedInputStream bin = null;
+		BufferedOutputStream bout = null;
 
+		
+		try {
+			
+
+			bin = new BufferedInputStream(new FileInputStream(from));
+			bout = new BufferedOutputStream(new FileOutputStream(to));
+			
+			byte[] b = new byte[1024]; //1킬로바이트 
+			int readByte = 0;
+			while((readByte=bin.read(b)) != -1) {
+				bout.write(b, 0, readByte); // 배열 b의 인덱스 0부터 readByte개 데이터를 사용한다. 
+			}
+			System.out.println("복사 완료되었습니다.");
+			
+		} catch(IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(bout != null) {
+					bout.close();
+				}
+				if(bin != null) {
+					bin.close();
+				}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
 	public static void main(String[] args) { //main 메소드를 호출하는 곳으로 예외 처리를 넘긴다.(개발자가 try - catch 하지 않겠다.)
-		ex06();
+		ex08();
 
 	}
 

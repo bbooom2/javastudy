@@ -21,6 +21,11 @@ public class MainClass {
 	  	1. 문자 기반의 출력 스트림이다. 
 	  	2. Writer로 끝나는 이름의 클래스는 모두 문자 기반의 출력 스트림이다. 출력이라는 건 보낸다는 개념.
 	  	3. 문자를 내보내는 스트림이다. (파일 문자를 보낸다. 서버로 문자를 보낸다 등등) 
+	  	
+	  	한글자 :int 
+	  	여러데이터 : char[], String
+	  	
+	  	출력메소드 : write
 	 */
 
 	public static void ex01() { //다 보내기 
@@ -113,7 +118,7 @@ public class MainClass {
 		 	BufferedWriter
 		 	1. 내부 버퍼를 가지고 있는 Writer이다. 
 		 	2. 속도 향상을 위해서 사용한다. 
-		 	3. 보조 스트림이므로 메인 스트림과 함께 사용해야 한다. 
+		 	3. '보조' 스트림이므로 메인 스트림과 '함께' 사용해야 한다. 
 		 
 		 */
 		
@@ -194,10 +199,11 @@ public class MainClass {
 		 
 		 File file = new File(dir, "ex05.txt");
 		 
+		 //PrintWriter 선언 
 		 PrintWriter out = null;
 		 
 		 try {
-			 	
+			 	//PrintWriter 생성 
 			 	out = new PrintWriter(file);
 			 
 			 //자동 줄바꿈이 사용되는 println 메소드 

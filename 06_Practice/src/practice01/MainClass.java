@@ -12,6 +12,14 @@ public class MainClass {
 		// Hint : 가위는 0, 바위는 1, 보는 2로 처리한다.
 		public static void ex01() {
 			
+		
+			Scanner sc = new Scanner(System.in);
+			System.out.print("가위바위보 >>> " );
+			String[] rsp = {"가위", "바위", "보"};
+			rsp = sc.next();
+			
+			
+			
 		}
 		
 		// 문제2. 친구 3명을 저장할 수 있는 배열을 생성하고 임의의 값으로 초기화하시오.
