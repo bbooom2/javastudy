@@ -1,6 +1,8 @@
 package ex04_OutPutStream;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 /*
   	
@@ -30,6 +32,13 @@ import java.io.Serializable;
 	
 	
 	//생성자 
+	
+	public Person() { //Person person = new Person();
+		
+	}
+	
+	
+	//List<Person>people = Arrays.asList
 	public Person(String name, int age, double height, boolean isAlive) {
 		super();
 		this.name = name;
@@ -37,6 +46,7 @@ import java.io.Serializable;
 		this.height = height;
 		this.isAlive = isAlive;
 	}
+
 
 
 	public String getName() {

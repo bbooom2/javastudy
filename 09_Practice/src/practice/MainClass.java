@@ -287,7 +287,7 @@ File dir = new File("C:" + File.separator + "storage");
 	//Scanner 대신 BufferedReader를 사용하시오. 
 	//중간에 변환 과정 필요 (바이트스트림으로 문자 스트림으로 바꿀 것) 
 	
-	public static void ex07() {
+	public static void ex07() { //시험준비 
 		
 		BufferedReader br = null; 
 		

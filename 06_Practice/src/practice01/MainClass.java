@@ -1,5 +1,6 @@
 package practice01;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class MainClass {
@@ -11,22 +12,64 @@ public class MainClass {
 		// 당신은 가위, 컴퓨터는 보, 이겼습니다.
 		// Hint : 가위는 0, 바위는 1, 보는 2로 처리한다.
 		public static void ex01() {
+			/* 	제일 중요한 건 로직 
+			  
+			 	**가위바위보의 로직** 
+			 1. 사용자는 가위, 바위, 보 중 하나를 낸다.
+			 2. 컴퓨터도 가위, 바위, 보를 무작위로 하나를 낸다. 
+			 3. 사용자와 컴퓨터의 가위바위보 결과를 비교한다. 
+			 4. 승패를 가린다. 
+			 5. 게임을 종료한다. 
+			 
+			*/
 			
-		
+			String[] rcp = {"가위", "바위", "보"};
+			int a = (int)(Math.random() * 3);  // 컴퓨터 : idx1 (0, 1, 2)
+			/*
+		 	난수 생성하기 
+		 	-랜덤함수는 기본이 double이기 때문에 int로 변경 
+		 	
+		 	Math.random()					0.0 <= n < 1.0
+		 	Math.random() * 3 				0.0 <= n < 3.0
+		 	(int)(Math.random() * 8) 		  0 <= n < 3        ===== 0,1,2 
+		 	*/
+			
+			//스캐너 생성 
 			Scanner sc = new Scanner(System.in);
-			System.out.print("가위바위보 >>> " );
-			String[] rsp = {"가위", "바위", "보"};
-			rsp = sc.next();
+			System.out.print("가위바위보 >>> ");
+			String userStr = sc.next();
+			String comStr = "";
+			
+			
+			int b;  // 사용자(user) : (0, 1, 2)
+			
+			
+			switch (a) {
+			case 0: comStr = "가위"; break;
+			case 1: comStr = "바위"; break;
+			default: comStr = "보";
+			}
+		
+			System.out.println("사용자 = " + userStr);
+			System.out.println("컴퓨터 = " + comStr);
 			
 			
 			
+			if()
+			
+			
+			System.out.println("컴퓨터는 " + rcp[a] + ", 당신은 " + rcp[b] + ", " );
+			
+			//스캐너 종료 
+			sc.close();
 		}
+			
 		
 		// 문제2. 친구 3명을 저장할 수 있는 배열을 생성하고 임의의 값으로 초기화하시오.
 		// 새로 사귄 친구의 수를 입력 받아서 기존 친구들이 저장된 배열의 길이를 새로 사귄 친구의 수만큼 늘리시오.
 		public static void ex02() {
-			String[] str = new String[3];
-			str = {"진구", "땡구", "땡순"};
+			String[] str ={"진구", "땡구", "땡순"};
+			
 		}
 		
 		// 문제3. Scanner 클래스의 next() 메소드를 이용해서 사용자로부터 문자열을 계속 입력 받는다.
@@ -153,7 +196,7 @@ public class MainClass {
 		}
 		
 		public static void main(String[] args) {
-			ex07();
+			ex01();
 		}
 
 	}

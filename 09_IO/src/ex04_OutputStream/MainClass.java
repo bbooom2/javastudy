@@ -10,6 +10,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 
+//문자, 기호, 숫자, 사진, 파일 등 다양한 데이터를 컴퓨터가 이해할 수 있도록 부호화하는 것을 인코딩(Encoding)
+//문자를 인코딩 또는 디코딩하는 과정에서 Charset이라는 개념이 등장하는데, Charset은 문자를 어떠한 형식으로 변환할 것인지 전 세계적으로 표준화된 형식
 public class MainClass {
 	
 	public static void ex01() {
@@ -75,9 +77,11 @@ public class MainClass {
 					
 			String str = "안녕하세요";
 			
-			//String.getBytes()는 문자열을 byte 배열로 변환
-			//String 객체를 생성할 때 인자로 byte 배열을 전달하면 문자열로 변환
-			//getBytes(Charset charset) (StandardCharsets는 자바 1.7 이상부터 사용 가능) 
+			/*	
+			  	String.getBytes()는 문자열을 byte 배열로 변환
+			  	String 객체를 생성할 때 인자로 byte 배열을 전달하면 문자열로 변환
+				getBytes(Charset charset) (StandardCharsets는 자바 1.7 이상부터 사용 가능) 
+			*/
 			byte[] b = str.getBytes(StandardCharsets.UTF_8); 
 			
 			//getBytes(String charsetName)
@@ -214,7 +218,7 @@ public class MainClass {
 	}
 	public static void main(String[] args) {
 		
-		 ex01();
+		 ex05();
 
 	}
 

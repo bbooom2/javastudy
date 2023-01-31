@@ -1,10 +1,17 @@
 package practice10_Walkable;
 
 public class MainClass {
+	
+	/* 
+	 	생각해보기 
+	 	1. 객체가 생성됐기 때문에 Dog, Cat, Snake, Person의 클래스가 있을 것이다.  + Pet , Walkable
+	 	2. person의 생성자로 foodfeed가 있을 것이다 
+	 	3. person의 생성자로 walk가 있을 것이다. 
+	 */
 
 	public static void main(String[] args) {
 		
-		Dog dog = new Dog("백구");
+		Dog dog = new Dog("백구"); 
 		Cat cat = new Cat("냥냥이");
 		Snake snake = new Snake("낼름이");
 		
