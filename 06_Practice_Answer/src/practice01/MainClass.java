@@ -14,15 +14,20 @@ public class MainClass {
 	public static void ex01() {
 		String[] player = {"가위", "바위", "보"};
 		int idx1 = (int)(Math.random() * 3);  // 컴퓨터 : idx1 (0, 1, 2)
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("가위바위보 >>> ");
+		
 		int idx2;  // 사용자 : idx2 (0, 1, 2)
+		
 		switch (sc.next()) {
 		case "가위": idx2 = 0; break;
 		case "바위": idx2 = 1; break;
 		default: idx2 = 2;
 		}
 		String result = null;
+		
+		
 		switch (idx2 - idx1) {
 		case 0: result = "비겼습니다";
 				break;
@@ -32,6 +37,7 @@ public class MainClass {
 		default: result = "졌습니다";
 		}
 		System.out.println("컴퓨터는 " + player[idx1] + ", 당신은 " + player[idx2] + ", " + result);
+		
 		sc.close();
 	}
 	
@@ -219,7 +225,7 @@ public class MainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex07();
+		ex01();
 	}
 
 }

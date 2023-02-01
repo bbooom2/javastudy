@@ -23,42 +23,60 @@ public class MainClass {
 			 
 			*/
 			
-			String[] rcp = {"가위", "바위", "보"};
-			int a = (int)(Math.random() * 3);  // 컴퓨터 : idx1 (0, 1, 2)
+
+			int computer = (int)(Math.random() * 3);  // 컴퓨터 : idx1 (0, 1, 2)
 			/*
 		 	난수 생성하기 
 		 	-랜덤함수는 기본이 double이기 때문에 int로 변경 
 		 	
-		 	Math.random()					0.0 <= n < 1.0
+		 	Math.random()					0.0 <= n < 1.0 //0과 1사이의 더블형 반환 
 		 	Math.random() * 3 				0.0 <= n < 3.0
-		 	(int)(Math.random() * 8) 		  0 <= n < 3        ===== 0,1,2 
+		 	(int)(Math.random() * 3) 		  0 <= n < 3        ===== 0,1,2 
 		 	*/
 			
-			//스캐너 생성 
+			//Scanner 객체 생성 
 			Scanner sc = new Scanner(System.in);
 			System.out.print("가위바위보 >>> ");
-			String userStr = sc.next();
-			String comStr = "";
 			
+			//가위 바위 보 중 하나 입력 
+			int user = sc.nextInt();
 			
-			int b;  // 사용자(user) : (0, 1, 2)
+			//컴퓨터가 입력을 받음 
+			String str = null;
+			String uStr = null;
 			
-			
-			switch (a) {
-			case 0: comStr = "가위"; break;
-			case 1: comStr = "바위"; break;
-			default: comStr = "보";
+			if(computer == 0) {
+				str = "가위";
+			}else if  (computer ==1 ) {
+				str = "바위";
+			}else if (computer == 2) {
+				str = "보";
 			}
+			
+			if(user == 0) {
+				uStr = "가위";
+			}else if  (user ==1 ) {
+				uStr = "바위";
+			}else if (user == 2) {
+				uStr = "보";
+			}
+			
+			String result = null; 
+			
+			if(user == computer) {
+				result = "비겼습니다.";
+			} else if ((user == 0 && computer == 2) | (user == 1 && computer == 0) | (user == 2 && computer == 1)) {
+				result = "이겼습니다.";
+			} else if ((user == 0 && computer == 1) | (user == 1 && computer == 2) | (user == 2 && computer == 0)) {
+				result = "졌습니다.";
+			}
+			
+			
 		
-			System.out.println("사용자 = " + userStr);
-			System.out.println("컴퓨터 = " + comStr);
+			System.out.println("컴퓨터는 " + str + ", 당신은 " + uStr + ", " + result );
 			
 			
 			
-			if()
-			
-			
-			System.out.println("컴퓨터는 " + rcp[a] + ", 당신은 " + rcp[b] + ", " );
 			
 			//스캐너 종료 
 			sc.close();

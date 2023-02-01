@@ -182,9 +182,9 @@ public class MainClass {
 				{"겨울", "winter"}
 		};
 		for (int i = 0; i < dictionary.length; i++) {
-			System.out.print(dictionary[i][0] + "을 영어로 하면? >>> ");
+			System.out.print(dictionary[i][0] + "을 영어로 하면? >>> "); //봄, 여름, 가을, 겨울 한글로 출력 
 			String answer = sc.next();
-			if (answer.equalsIgnoreCase(dictionary[i][1])) {
+			if (answer.equalsIgnoreCase(dictionary[i][1])) { //spring, summer, fall, winter 대소문자 상관없이 비교 
 				System.out.println("정답");
 			} else {
 				System.out.println("오답");
@@ -347,7 +347,7 @@ public class MainClass {
 	public static void ex10() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("얼마나 구입하시겠습니까? >>> ");
-		int money = sc.nextInt();
+		int money = sc.nextInt(); 
 		while(money > 0) {
 			int row = (money >= 5000) ? 5 : money / 1000;
 			int[][] lotto = new int[row][6];
