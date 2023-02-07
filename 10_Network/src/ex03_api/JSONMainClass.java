@@ -100,11 +100,6 @@ public class JSONMainClass {
 			JSONObject body = obj.getJSONObject("response").getJSONObject("body"); // 리스폰과 바디를 꺼내옴. 괄호에서 가장 바깥쪽 대괄호가 리스폰? 
 			JSONArray items = body.getJSONArray("items"); //깐 값들을 array로 만들것 
 			
-		
-			
-	        
-			 //하면 내용 한번 확인 가능. 
-			
 			
 			//JSONArray 때문에 이걸 for문으로 활용 가능
 			//JSONArray []안에 있는 JSONObject { }를 빼줄 것. 
