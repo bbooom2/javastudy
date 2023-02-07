@@ -18,13 +18,13 @@ public class MainClass {
 			
 			
 			for(String str : season) {
-				System.out.println(str.substring(0, 3));
+				System.out.println(str.substring(0, 4));
 				}
 			
 				//예외객체 이름은 관습적으로 e라고 기재함 
 			
 			} catch(Exception e) { //모든 예외는 Exception으로 처리 가능, 실행흐름을 넘기겠다. (발생하면)
-				System.out.println("ArrayIndexOutofBoundsException 발생");
+				System.out.println("ArrayIndexOutofBoundsException 발생"); //배열의 크기는 4인데 5개의 값을 입력하려고 하니 해당메시지 나옴 
 		}
 	}
 	
@@ -32,9 +32,9 @@ public class MainClass {
 		
 		try {
 			String input = "1, 2, 3,, 4, 5";
-			String[] numbers = input.split(",");
-			int[] iNumbers = new int[numbers.length];
-			
+			String[] numbers = input.split(","); // , 기준으로 분리 
+			int[] iNumbers = new int[numbers.length]; // int[] iNumbers = new int[5];
+
 			for(int i = 0; i < numbers.length; i++) {
 				iNumbers[i] = Integer.parseInt(numbers[i]);
 				System.out.println(iNumbers[i]);
@@ -78,6 +78,6 @@ public class MainClass {
 	
 	public static void main(String[] args) {
 		
-		ex03();
+		ex02();
 	}
 }

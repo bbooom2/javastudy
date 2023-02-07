@@ -2,20 +2,33 @@ package practice05_Employee;
 
 import java.util.Scanner;
 
+
+/*
+			   System.arraycopy(src, srcPos, dest, destPos, length);
+	문제 답안 :System.arraycopy(employees, i + 1, employees, i, idx - 1 - i)
+	
+	Object src  : 복사할 객체, 원본 배열
+	int srcPos : 복사 시작할 index
+	Object dest : 복사된 배열
+	int destPos : 원본으로부터 가져온 데이터를 복사된 배열의 몇 번째부터 추가할지
+	int length : 카피되는 배열 요소 개수
+*/
+
 public class Company {
 
 	private Employee[] employees;
 	private int idx;
 	private Scanner sc;
 	
-	public Company() {
+	public Company() { //여기에 스캐너 저장해놔야 다른 메소드에서도 끌어서 쓸 수 있음. 부모격이라고 생각하기. 
 		employees = new Employee[5];  // 사원을 최대 5명 고용할 수 있는 회사
-		sc = new Scanner(System.in);
+		sc = new Scanner(System.in); 
+		
 	}
 	
 	public void addEmployee() {
 		if(idx == employees.length) {
-			System.out.println("더 이상 사원을 고용할 수 없습니다.");
+			System.out.println("더 이상 사원을 고용할 수 없습니다."); //5명 이상 고용하려고 할 시 멘트 나옴 
 			return;
 		}
 		System.out.print("고용 형태 선택(1.정규 2.비정규) >>> ");
@@ -24,12 +37,12 @@ public class Company {
 		int empNo = sc.nextInt();
 		System.out.print("신규 사원명 >>> ");
 		String name = sc.next();
-		switch(kind) {
+		switch(kind) { //1, 정규 어느것을 하더라도 정규직 내용 출력 / 비정규직 마찬가지
 		case "1":
 		case "정규":
 			System.out.print("기본급 >>> ");
 			int salary = sc.nextInt();
-			employees[idx++] = new Regular(empNo, name, salary);
+			employees[idx++] = new Regular(empNo, name, salary); //사원번호 이름 번호 출력 
 			break;
 		case "2":
 		case "비정규":

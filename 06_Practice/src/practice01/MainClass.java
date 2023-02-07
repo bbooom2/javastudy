@@ -22,7 +22,12 @@ public class MainClass {
 			 5. 게임을 종료한다. 
 			 
 			*/
+			//Scanner 객체 생성 
+			Scanner sc = new Scanner(System.in);
+			System.out.print("가위바위보 >>> ");
 			
+			//가위 바위 보 중 하나 입력 
+			int user = sc.nextInt();
 
 			int computer = (int)(Math.random() * 3);  // 컴퓨터 : idx1 (0, 1, 2)
 			/*
@@ -34,14 +39,6 @@ public class MainClass {
 		 	(int)(Math.random() * 3) 		  0 <= n < 3        ===== 0,1,2 
 		 	*/
 			
-			//Scanner 객체 생성 
-			Scanner sc = new Scanner(System.in);
-			System.out.print("가위바위보 >>> ");
-			
-			//가위 바위 보 중 하나 입력 
-			int user = sc.nextInt();
-			
-			//컴퓨터가 입력을 받음 
 			String str = null;
 			String uStr = null;
 			
@@ -63,6 +60,8 @@ public class MainClass {
 			
 			String result = null; 
 			
+			// && 논리식이 모두 참이면 참을 반환, 선조건이 true일 때만 후조건을 실행하며 선조건이 false이면 후조건을 실행하지 않는다.
+			// | 비교 대상 하나만 true이면 결과 true, 	선조건이 true이면 후조건을 실행하지 않으며 선조건이 false일 때만 후조건을 실행한다.
 			if(user == computer) {
 				result = "비겼습니다.";
 			} else if ((user == 0 && computer == 2) | (user == 1 && computer == 0) | (user == 2 && computer == 1)) {
@@ -71,11 +70,8 @@ public class MainClass {
 				result = "졌습니다.";
 			}
 			
-			
-		
+
 			System.out.println("컴퓨터는 " + str + ", 당신은 " + uStr + ", " + result );
-			
-			
 			
 			
 			//스캐너 종료 
@@ -211,10 +207,18 @@ public class MainClass {
 		// 처음 뵙겠습니다
 		public static void ex10() {
 			
+			Scanner sc = new Scanner(System.in);
+			String [] friend = {"정우성", "차은우", "이도영"};
+			System.out.println("이름 입력 >>> ");
+			String name = sc.next();
+			for(int i = 0; i < friend.length; i++) {
+				if(friend[i].toString() == name) {
+					System.out.println("반갑다 친구야");
+				} 
+			}System.out.println("처음 뵙겠습니다");
 		}
-		
 		public static void main(String[] args) {
-			ex01();
+			ex10();
 		}
 
 	}

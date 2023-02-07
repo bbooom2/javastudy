@@ -216,7 +216,7 @@ public class MainClass {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("이름 입력 >>> ");
 		name = sc.next();
-		if(Arrays.binarySearch(friends, name) >= 0) {
+		if(Arrays.binarySearch(friends, name) >= 0) {  //binerySearch(탐색할 배열, 찾을 값) 찾을 값의 인덱스를 반환한다. 이 때 이 메소드를 사용하려면 정렬되어 있어야 한다. 
 			System.out.println("반갑다 친구야");
 		} else {
 			System.out.println("처음 뵙겠습니다");

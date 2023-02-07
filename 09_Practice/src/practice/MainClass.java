@@ -75,8 +75,8 @@ public class MainClass {
 		               2개 파일               1,462 바이트
 		*/
 		
-		//라스트 모디파이드 
-		//이프 
+		//lastModified 
+		//if
 		//디렉터리 아무것도 X 파일은 표시 
 		//이름 표기 
 		File dir = new File("C:" + File.separator + "Program Files" +File.separator+"Java"+File.separator+"jdk-11.0.17");
@@ -242,6 +242,7 @@ File dir = new File("C:" + File.separator + "storage");
 
 	//문제 6. C:\storage\diary.txt 파일을 C:\storage2\diary.txt 파일로 이동하시오 
 	public static void ex06() {
+		
 		File from = new File("C:" + File.separator + "storage", "diary.txt");		
 		
 		File toDir = new File("C:" + File.separator + "storage2");
@@ -279,8 +280,18 @@ File dir = new File("C:" + File.separator + "storage");
 			
 		} catch(IOException e) {
 			e.printStackTrace();
-		} 
-	}
+					} 
+	}	
+		
+		 	
+		/*
+		File file = new File("/Users/mong/Documents/storage" + File.separator + "diary.txt");
+		File fileToMove = new File("/Users/mong/Documents" + File.separator + "diary.txt");
+		
+		boolean succes = file.renameTo(fileToMove);
+		if(!succes) {
+					System.out.println(fileToMove + "파일 이동 실패");
+			*/
 	
 	//문제7. System.in은 키보드로부터 바이트 데이터를 입력 받는 InputStream이다. 
 	//System.in으로부터 문장 1개를 입력 받아서 출력하시오. 
@@ -349,8 +360,18 @@ File dir = new File("C:" + File.separator + "storage");
 				e.printStackTrace();
 			}
 		}
+		}
+	/*
+		Path file      = Paths.get("Users/mong/Document/storage" + File.separator + "eclipse-jee-2021-03-R-macosx-cocoa-x86_64.dmg");
+		Path fileToCopy = Paths.get("Users/mong/Documents" + File.separator + "eclipse-jee-2021-03-R-macosx-cocoa-x86_64.dmg");
+		try {
+		    Files.copy(file, fileToCopy);
+		} catch(IOException e) {
+		    e.printStackTrace();
+	 */
+	
 		
-	}
+	
 	public static void main(String[] args) { //main 메소드를 호출하는 곳으로 예외 처리를 넘긴다.(개발자가 try - catch 하지 않겠다.)
 		ex08();
 

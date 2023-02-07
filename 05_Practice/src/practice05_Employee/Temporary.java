@@ -28,7 +28,7 @@ public class Temporary extends Employee {
 		System.out.print("[시급:" + hourPay + "원]");
 	}
 	
-	@Override
+	@Override 
 	public int getPay() {
 		return hourPay * 200;  // 비정규직은 시급 * 근무시간이 월급이다. 편의상 근무시간은 모두 200시간으로 한다.
 	}

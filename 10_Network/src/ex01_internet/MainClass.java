@@ -56,7 +56,7 @@ public class MainClass {
 
 	public static void ex02() {
 		
-		// 웹 접속을 담당하는 HttpURLConnection
+		// 웹 접속 담당 :  HttpURLConnection
 		
 		String apiURL = "https://www.naver.com";
 		URL url = null; 
@@ -114,7 +114,7 @@ public class MainClass {
 		String apiURL = "https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"; //다음로고 
 		URL url = null; 
 		HttpURLConnection con = null; 
-		BufferedInputStream in = null;  		// Daum 로그를 읽어 들이는 입력 스트림 
+		BufferedInputStream in = null;  		// Daum 로고를 읽어 들이는 입력 스트림 
 		BufferedOutputStream out = null;		// C:\storage\daum.png로 내보내는 출력 스트림 
 		File file = new File("C:" + File.separator + "storage" , "daum.png");
 		try { 
@@ -234,11 +234,55 @@ public class MainClass {
 	
 	public static void ex06() { //연습 
 	
-		// 1시간마다 갱신되는 전국 날시 정보 
-		String apiURL = "http://www.kma.go.kr/XML/weather/sfc_web_map.xml";
+		// 1시간마다 갱신되는 전국 날씨 정보
+				String apiURL = "http://www.kma.go.kr/XML/weather/sfc_web_map.xml";
+				URL url = null;
+				HttpURLConnection con = null;
+				
+				BufferedReader reader = null;
+				BufferedWriter writer = null;
+				File file = null;
+				
+				try {
+					
+					url = new URL(apiURL);
+					con = (HttpURLConnection) url.openConnection();
+					
+					String message = null;
+					int responseCode = con.getResponseCode();
+					if(responseCode == HttpURLConnection.HTTP_OK) {
+						reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+						file = new File("C:" + File.separator + "storage", "sfc_web_map.xml");
+						message = "다운로드 성공";
+					} else {
+						reader = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+						file = new File("C:" + File.separator + "storage", "다운로드실패.html");
+						message = "다운로드 실패";
+					}
+					
+					StringBuilder sb = new StringBuilder();
+					String line = null;
+					while((line = reader.readLine()) != null) {
+						sb.append(line + "\n");
+					}
+					
+					writer = new BufferedWriter(new FileWriter(file));
+					writer.write(sb.toString());
+					
+					writer.close();
+					reader.close();
+					con.disconnect();
+					
+					System.out.println(message);
+					
+				} catch(MalformedURLException e) {
+					System.out.println("apiURL 주소 오류");
+				} catch(IOException e) {
+					e.printStackTrace();
+				}
+				
+			}
 		
-		
-	}
 	public static void main(String[] args) {
 		ex05();
 		

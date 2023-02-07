@@ -27,7 +27,7 @@ public class Americano {
 		// 조회 info 메소드
 		public void info() {
 			int totalWater = 0;
-			for(int i = 0; i < cups.length; i++) {
+			for(int i = 0; i < cups.length; i++) { //에스프레소  Esspresso[] cups;  
 				System.out.println("◁◁◁" + (i + 1) + "번째 샷 정보 ▷▷▷");
 				cups[i].info();
 				totalWater += cups[i].getWater();

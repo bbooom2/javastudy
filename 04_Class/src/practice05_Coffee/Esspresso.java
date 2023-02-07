@@ -32,7 +32,7 @@ public class Esspresso {
 		}
 		
 		public void info() {
-			coffeeBean.info();
+			coffeeBean.info(); //System.out.println("원산지 : " + origin);
 			System.out.println("물 : " + water + "m1");
 		}
 }

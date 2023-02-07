@@ -1,6 +1,17 @@
 package practice05_Coffee;
 
 public class MainClass {
+	
+	//객체가 생성이 됐다 = 이에 따른 클래스가 있을 것이다.
+	
+	//					정말로 그런가? 
+	
+	// 객체 생성 → 커피빈, 에스프레소, 아메리카노 = 클래스 → 커피빈, 에스프레소, 아메리카노 확인.  
+	
+	// 작은 것에서 큰 것으로 나아가야 하므로 CoffeeBean < Esspresso < Americano로 진행해야 함. 
+	// 에스프레소에서는 커피빈을 사용할 것이고 아메리카노에서는 에스프레소를 사용할 것.
+
+	
 
 	public static void main(String[] args) {
 		
