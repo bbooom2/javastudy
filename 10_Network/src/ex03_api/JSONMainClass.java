@@ -85,6 +85,7 @@ public class JSONMainClass {
 			StringBuilder sb = new StringBuilder();
 			
 			
+			
 			//BufferedReader.readLine()는 파일에서 1줄의 문자열을 리턴. 
 			//readLine()으로 연속적으로 데이터를 읽다가 파일의 끝에 도달하는 경우 null을 리턴한다.
 			//null을 확인될 시 while 문이 종료된다.
@@ -142,6 +143,8 @@ public class JSONMainClass {
 			sbURL.append("&returnType=json");
 			sbURL.append("&searchDate=2023-01-30");
 			
+			System.out.println(sbURL);
+			
 			url = new URL(sbURL.toString());
 			con = (HttpURLConnection) url.openConnection();
 			
@@ -167,6 +170,7 @@ public class JSONMainClass {
 								.getJSONObject("response")
 								.getJSONObject("body")
 								.getJSONArray("items");
+			System.out.println(items);
 			for(int i = 0; i < items.length(); i++) {
 				JSONObject item = items.getJSONObject(i);
 				System.out.println(item.getString("frcstOneDt") + " : " + item.getString("frcstOneCn"));
@@ -182,7 +186,7 @@ public class JSONMainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex01();
+		ex02();
 
 	}
 
