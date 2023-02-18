@@ -2,10 +2,10 @@ package ex03_singleton;
 
 public class User {
 
-	// static 필드 (미리 User를 만들어 둔다.)
+	// static 필드 (미리(static) User를 만들어 둔다.) - 이게 전달됨 
 	private static User user = new User();
 	
-	// private 생성자 (외부에서는 생성자를 호출할 수 없다.)
+	// private 생성자 (외부에서는 생성자를 호출할 수 없다.) -New를 안해서 
 	private User() {
 		
 	}

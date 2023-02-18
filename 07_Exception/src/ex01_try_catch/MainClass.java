@@ -23,7 +23,7 @@ public class MainClass {
 			
 				//예외객체 이름은 관습적으로 e라고 기재함 
 			
-			} catch(Exception e) { //모든 예외는 Exception으로 처리 가능, 실행흐름을 넘기겠다. (발생하면)
+			} catch(Exception e) { //모든 예외는 Exception으로 처리 가능. 예외가 발생하면 실행흐름을 넘기겠다. 
 				System.out.println("ArrayIndexOutofBoundsException 발생"); //배열의 크기는 4인데 5개의 값을 입력하려고 하니 해당메시지 나옴 
 		}
 	}
