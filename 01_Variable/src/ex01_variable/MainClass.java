@@ -7,8 +7,8 @@ public class MainClass {
 	 		multiple comment 
 	 		여러 줄 주석 
 	 */
+	
 	/*
-	 
 	  키워드 이름 규칙 
 	  1. 프로젝트 : 마음대로 
 	  2. 패키지 : 모두 소문자로 작성. 실무에서는 회사 도메인과 앱 이름으로 작성(com.samsung.galaxy) 
@@ -16,7 +16,6 @@ public class MainClass {
 	  4. 메소드 : 첫 글자만 대문자로 작성하고 나머지는 소문자. Lower Camel Case 방식(helloWorld) 
 	  5. 변수   : 첫 글자만 대문자로 작성하고 나머지는 소문자. Lower Camel Case 방식(helloWorld) 
 	  6. 상수 	: 항상 같은 값을 가지는 변수. 모두 대문자로 작성. Snake Case 방식(HELLO_WORLD) 
-	 
 	 */
 	
 	/*
@@ -85,19 +84,6 @@ public class MainClass {
 		final double PI = 3.141592;
 		System.out.println(PI);
 		//PI = 3.0; 값을 못바꾸게 함 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 

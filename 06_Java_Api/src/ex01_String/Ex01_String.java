@@ -149,7 +149,7 @@ public class Ex01_String {
 		
 	}
 	
-	public static void startsWith() {
+	public static void startsWith() { // 거의 안 나옴. 굳이 중요하게 안 봐도 될 듯.
 		
 		//startWith
 		//문자열이 지정된 정규식 패턴(Regular Expression)으로 '시작'하면 true 반환 
@@ -285,10 +285,10 @@ public class Ex01_String {
 		System.out.println(String.format("%s", str)); // %s : 문자열로 표시하시오.
 		
 		// 출력 폭 지정하기 
-		System.out.println(String.format("%10d", number)); // %10d   : 10자리로 표시하시오. 숫자는 오른쪽에 표시하시오.
-		System.out.println(String.format("%-10d", number)); // %-10d : 10자리로 표시하시오. 숫자는 왼쪽에 표시하시오.
-		System.out.println(String.format("%5s", str)); // %5s :오른쪽 표기 
-		System.out.println(String.format("%-5s", str)); // %-5s : 왼쪽 표기 
+		System.out.println(String.format("%10d", number));   // %10d   : 10자리로 표시하시오. 숫자는 오른쪽에 표시하시오.
+		System.out.println(String.format("%-10d", number));  // %-10d : 10자리로 표시하시오. 숫자는 왼쪽에 표시하시오.
+		System.out.println(String.format("%5s", str));       // %5s :오른쪽 표기 
+		System.out.println(String.format("%-5s", str));      // %-5s : 왼쪽 표기 
 		
 	}
 	

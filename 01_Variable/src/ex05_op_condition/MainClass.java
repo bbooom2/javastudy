@@ -65,11 +65,11 @@ public class MainClass {
 		
 		boolean result1 = (a == 20)&&(++b == 11); 
 		
-		System.out.println(b); //10 애초에 a부분이 false라 더이상 진행 X
+		System.out.println(b);       //10 애초에 a부분이 false라 더이상 진행 X
 		System.out.println(result1); //false
 		
 		boolean result2 = (a == 10) || (++b == 11);
-        System.out.println(b); //10 애초에 a부분이 true라 더이상 진행 X
+        System.out.println(b);       //10 애초에 a부분이 true라 더이상 진행 X
 		System.out.println(result2); //true 
 		
 	}
@@ -77,10 +77,10 @@ public class MainClass {
 		public static void ex04() { //연습
 			int score = 75;
 			
-			boolean result = (score >= 70)  && (score <80);	 //70점대는 true 아니면 false 
+			boolean result = (score >= 70)  && (score < 80);	 // 70점대는 true 아니면 false 
 			System.out.println(result);
 			
-			boolean result2 = (score / 10) == 7; //70점대는 true 아니면 false 
+			boolean result2 = (score / 10) == 7;                // 70점대는 true 아니면 false 
 			System.out.println(result2);
 		}
  	
@@ -116,7 +116,7 @@ public class MainClass {
 			System.out.println(result);
 		}
 		public static void main(String[] args) {
-		ex07();
+		ex04();
 		
 	  
 		

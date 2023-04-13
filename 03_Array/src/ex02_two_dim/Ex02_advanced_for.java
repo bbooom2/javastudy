@@ -20,7 +20,7 @@ public class Ex02_advanced_for {
 		}
 	}
 
-	public static void ex02() {
+	public static void ex02() { // 이거 잘 이해하면 배열 정복
 		
 		String[][] timeTable = { //앞이 대문자이면 객체를 저장하고 싶을 때 사용하는 class 
 				{"국어", "윤리", "수학", "체육"},
@@ -29,8 +29,8 @@ public class Ex02_advanced_for {
 				{"음악", "국어", "윤리"}
 		};
 		
-		for(String[] day : timeTable) {
-			for(String subject : day) {
+		for(String[] day : timeTable) { // 배열을 가져옴 
+			for(String subject : day) { // 배열의 요소를 가져옴 
 					System.out.print(subject + "\t");
 			}
 			System.out.println();

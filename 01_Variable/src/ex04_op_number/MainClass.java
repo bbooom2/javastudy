@@ -120,7 +120,7 @@ public class MainClass {
  	 			
  		
 	    public static void main(String[] args) {
-		ex07(); // ex07 메소드 호출
+		ex08(); // ex07 메소드 호출
 		
 		
 	}

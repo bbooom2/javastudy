@@ -25,7 +25,7 @@ public class Ex03_advanced_for {
 	for(int n : scores) { 
 			total += n;
 			if(max < n) {
-					max = n;
+			max = n;
 		}
 		if(min > n) {
 			min = n;

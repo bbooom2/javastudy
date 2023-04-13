@@ -44,7 +44,7 @@ public class Ex01_array {
 		
 	}
 	
-	public static void ex03() {
+	public static void ex03() { // 이게 중요 
 		
 		// 2차원 배열 선언 
 		int[][] arr;
